@@ -56,7 +56,7 @@ function App() {
   }
 
   function onInputSubmit() {
-    fetch("http://localhost:3000/imageurl",{
+    fetch("https://clarifai-face-detection-backend.onrender.com/imageurl",{
         method : "post",
         headers : {"Content-Type" : "application/json"},
         body : JSON.stringify({image : imagelink})
@@ -65,7 +65,7 @@ function App() {
     .then(result => {
       setBox(calculateBoundingBox(result));
       
-      fetch("http://localhost:3000/image",{
+      fetch("https://clarifai-face-detection-backend.onrender.com/image",{
         method : "put",
         headers : {"Content-Type" : "application/json"},
         body : JSON.stringify({id: profile.id})

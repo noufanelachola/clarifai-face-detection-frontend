@@ -34,7 +34,7 @@ function Register({onRouteChange,loadUser}) {
 
     const onRegisterSubmit = (event) => {
         event.preventDefault();
-        fetch("http://localhost:3000/register",{
+        fetch("https://clarifai-face-detection-backend.onrender.com/register",{
             method : 'post',
             headers : {"Content-Type" : 'application/json'},
             body : JSON.stringify(registerState)
