@@ -40,7 +40,7 @@ function Register({onRouteChange,loadUser}) {
             body : JSON.stringify(registerState)
         }).then(response => response.json())
             .then(user => {
-                if(user.name && user.email && user.password){
+                if(user.name && user.email){
                     onRouteChange("Home");
                     loadUser(user);
                 }
